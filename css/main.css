@@ -99,7 +99,6 @@ body {
   color: white;
   background-color: rgba(0, 0, 0, .5);
   transition: .5s;
-
 }
 
 .header ul li {
@@ -167,11 +166,19 @@ body {
 /* End Header */
 /* Start Landing */
 .landing .container {
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, .6);
+  width:100%;
+  height: 100%;
+  position: relative;
 }
-
+.landing::before{
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  display: block;
+  z-index: 0;
+  background: rgba(0, 0, 0, .5);
+}
 .landing {
   background-image: url("../imgs/landing.jpg");
   background-size: cover;
@@ -182,6 +189,7 @@ body {
   padding: 25px 50px;
   color: white;
   max-width: 500px;
+  text-align: left;
   background-color: rgb(15 116 143 / 70%);
 }
 
@@ -202,6 +210,9 @@ body {
   justify-content: center;
   height: 70px;
   background-color: #000;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 .icon-2 span {
@@ -228,11 +239,6 @@ body {
     transform: translateY(-50%)
   }
 
-  .icon-2 {
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-  }
 
 
   .arrow i {
@@ -854,6 +860,8 @@ body {
   background: #fcfcfc;
   color: #000;
   transition: .3s;
+  overflow: hidden;
+  border-radius: 2rem;
   text-align: center;
 }
 
